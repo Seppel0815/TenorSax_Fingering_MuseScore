@@ -1,3 +1,22 @@
+//=============================================================================
+//  MuseScore
+//  Music Composition & Notation
+//
+//  TenorSaxFingering Plugin
+//
+// This Program based on the Xaphoon Plugin of:
+//  Copyright (C)2010 Nicolas Froment (lasconic)
+//  Copyright (C)2015 Hervé Laurent (AirW)
+//  Copyright (C)2019 Sylvain Kuntzmann (skunt)
+//
+// Edited by: 
+//  Copyright (C)2019 Sepp Knieriem(Seppel0815)
+//
+//  This program is free software; you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License version 2
+//  as published by the Free Software Foundation and appearing in
+//  the file LICENCE.GPL
+//=============================================================================
 
      
      import QtQuick 2.9
