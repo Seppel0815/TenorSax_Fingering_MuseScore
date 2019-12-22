@@ -36,16 +36,14 @@ MuseScore {
 
     function tabNotes(notes, cursor) {
         var pitch = notes[0].pitch;  // pitch of the chord top note
-        var index = pitch - 46;      //  index =  pitch - 46 (60 is the midi pitch of B, 0 index in fingerings)
+        var index = pitch - 46;      //  index =  pitch - 46 (46 is the midi pitch of B, 0 index in fingerings)
         if(index >= 0 && index < fingerings.length){
             var text = newElement(Element.STAFF_TEXT);
             
-            text.placement = Placement.BELOW
-            text.autoplace = false
-            text.offsetY = 12
+            text.placement = Placement.BELOW  //Place Taps below notation
+            text.autoplace = false // deactivate Autopacement
+            text.offsetY = 12 // Set Offset Y to 12.
             text.text = '<font face="SeppsTenorSaxFont"/>' + '<font size="50"/>' + fingerings[index];
-//            text.offsetY = -7,5; //not used : automatic placement
-//            text.offsetX = -1,1; //not used : automatic placement
             cursor.add(text);
         }
     }
