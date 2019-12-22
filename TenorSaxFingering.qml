@@ -39,6 +39,10 @@ MuseScore {
         var index = pitch - 46;      //  index =  pitch - 46 (60 is the midi pitch of B, 0 index in fingerings)
         if(index >= 0 && index < fingerings.length){
             var text = newElement(Element.STAFF_TEXT);
+            
+            text.placement = Placement.BELOW
+            text.autoplace = false
+            text.offsetY = 12
             text.text = '<font face="SeppsTenorSaxFont"/>' + '<font size="50"/>' + fingerings[index];
 //            text.offsetY = -7,5; //not used : automatic placement
 //            text.offsetX = -1,1; //not used : automatic placement
