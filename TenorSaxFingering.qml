@@ -27,7 +27,7 @@ MuseScore {
     description: "This plugin displays fingering for Tenor Sax"
     menuPath: "Plugins.TenorSax Fingering"
 
-    property variant fingerings : [ "C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "H", "J", "j", "K", "k", "L", "M", "m", "N", "n", "O", "o", "Q", "R", "r", "B", "P"];
+    property variant fingerings : ["X", "x", "C", "c", "D", "d", "E", "F", "f", "G", "g", "A", "a", "H", "J", "j", "K", "k", "L", "M", "m", "N", "n", "O", "o", "Q", "R", "r", "Y", "y", "Z", "z"];
 
     onRun: {
         apply();
@@ -36,13 +36,13 @@ MuseScore {
 
     function tabNotes(notes, cursor) {
         var pitch = notes[0].pitch;  // pitch of the chord top note
-        var index = pitch - 46;      //  index =  pitch - 46 (46 is the midi pitch of B, 0 index in fingerings)
+        var index = pitch - 44;      //  index =  pitch - 46 (46 is the midi pitch of B, 0 index in fingerings)
         if(index >= 0 && index < fingerings.length){
             var text = newElement(Element.STAFF_TEXT);
             
             text.placement = Placement.BELOW  //Place Taps below notation
             text.autoplace = false // deactivate Autopacement
-            text.offsetY = 12 // Set Offset Y to 12.
+            text.offsetY = 10 // Set Offset Y to 12.
             text.text = '<font face="SeppsTenorSaxFont"/>' + '<font size="50"/>' + fingerings[index];
             cursor.add(text);
         }
