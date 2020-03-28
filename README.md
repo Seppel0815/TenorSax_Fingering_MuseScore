@@ -6,7 +6,7 @@ Install an activate the Plugin in MuseScore
 
 CHANGELOG:
 
-0.3 Insert all the Fingering from Ais to high F. Only one Fingering, if more ist possible. 
+0.3 Insert all the Fingering from Ais to high F. Only one Fingering, if more is possible. 
 
 0.2 Insert the Fingering below the notation. So you can insert NoteNames above and FingeringTabs below 
 
